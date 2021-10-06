@@ -193,7 +193,8 @@ namespace ICT3101_Calculator
             //----------------------------------------
             //string[] magicStrings = getTheMagic.Read(@"Your file name");
 
-            string[] magicStrings = fileReader.Read(@"C:\Users\Brandon\source\repos\ICT3101_Calculator\ICT3101_Calculator\MagicNumbers.txt");
+            //string[] magicStrings = fileReader.Read(@"C:\Users\Brandon\source\repos\ICT3101_Calculator\ICT3101_Calculator\MagicNumbers.txt");
+            string[] magicStrings = fileReader.Read(@"MagicNumbers.txt");
             if ((choice >= 0) && (choice < magicStrings.Length))
             {
                 result = Convert.ToDouble(magicStrings[choice]);
