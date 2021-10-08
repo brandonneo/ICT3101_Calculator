@@ -17,7 +17,7 @@ namespace ICT3101_Calculator.UnitTests
         {
             _mockFileReader = new Mock<IFileReader>();
             _mockFileReader.Setup(fr =>
-            fr.Read(@"Your text file")).Returns(new string[4] { "3", "-1", "0", "1" });
+            fr.Read(@"MagicNumbers.txt")).Returns(new string[4] { "6", "-1", "0", "1" });
             _calculator = new Calculator();
         }
 
@@ -36,7 +36,7 @@ namespace ICT3101_Calculator.UnitTests
             // Act
             double result = _calculator.GenMagicNum(0, _mockFileReader.Object);
             // Assert
-            Assert.That(result, Is.EqualTo(-0));
+            Assert.That(result, Is.EqualTo(12));
         }
 
         [Test]
@@ -45,7 +45,7 @@ namespace ICT3101_Calculator.UnitTests
             // Act
             double result = _calculator.GenMagicNum(1, _mockFileReader.Object);
             // Assert
-            Assert.That(result, Is.EqualTo(0));
+            Assert.That(result, Is.EqualTo(2));
         }
 
         [Test]

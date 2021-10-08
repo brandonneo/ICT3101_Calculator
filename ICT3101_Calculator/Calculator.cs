@@ -6,7 +6,13 @@ namespace ICT3101_Calculator
 {
     public class Calculator
     {
-        public Calculator() { }
+        private FileReader getTheMagic;
+
+        public Calculator() {
+            // Lab 4 Q4
+            getTheMagic = new FileReader();
+        }
+     
         public double DoOperation(double num1, double num2, string op)
         {
             double result = double.NaN; // Default value
@@ -48,6 +54,10 @@ namespace ICT3101_Calculator
                     break;
                 // Return text for an incorrect option entry.
                 default:
+                    break;
+                case "magic":
+                    // Get magic number
+                    result = GenMagicNum(num1, getTheMagic);
                     break;
             }
             return result;
@@ -187,7 +197,7 @@ namespace ICT3101_Calculator
             double result = 0;
             int choice = Convert.ToInt16(input);
 
-            // Lab 4 Q1
+            // lab 4 Q1
             //Dependency------------------------------
             //FileReader getTheMagic = new FileReader();
             //----------------------------------------

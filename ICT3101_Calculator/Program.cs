@@ -46,6 +46,14 @@ namespace ICT3101_Calculator
                 Console.WriteLine("\taoc - Area of Circle");
                 Console.WriteLine("\tufa - Unknown Function A");
                 Console.WriteLine("\tufb - Unknown Function B");
+                Console.WriteLine("\tmtbf - Mean Time Before Failure");
+                Console.WriteLine("\tavailability - Availability");
+                Console.WriteLine("\tcfi - Current Failure Intensity");
+                Console.WriteLine("\tnef - Number of Expected Failures");
+                Console.WriteLine("\tdd - Defect Density");
+                Console.WriteLine("\tssi - SSI for second release");
+                Console.WriteLine("\tmagic - Magic Number");
+                Console.Write("Your option? ");
 
 
                 Console.Write("Your option? ");
