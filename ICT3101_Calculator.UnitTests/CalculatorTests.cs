@@ -152,7 +152,7 @@ namespace ICT3101_Calculator.UnitTests
         }
 
         // Unknown Function A
-        [Test]
+       /* [Test]
         public void UnknownFunctionA_WhenGivenTest0_Result()
         {
             // Act
@@ -229,7 +229,7 @@ namespace ICT3101_Calculator.UnitTests
             // Act
             // Assert
             Assert.That(() => _calculator.UnknownFunctionB(4, 5), Throws.ArgumentException);
-        }
+        }*/
 
         // Lab 4 Q4 If number of lines is 4 as .txt file contatins 3, -1, 0, 1
         [Test]
