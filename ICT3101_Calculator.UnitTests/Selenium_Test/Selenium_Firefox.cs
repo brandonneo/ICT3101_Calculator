@@ -31,11 +31,11 @@ namespace ICT3101_Calculator.UnitTests.Selenium_Test
             System.Threading.Thread.Sleep(1000);
             //Act------------------------------/
             IWebElement searchBox = _driver.FindElement(By.CssSelector("[name = 'q']"));
-            searchBox.SendKeys(6 - 2 + Keys.Return);
+            searchBox.SendKeys("6 - 2" + Keys.Return);
             System.Threading.Thread.Sleep(1000);
             //Assert---------------------------/
             IWebElement calcAnswer = _driver.FindElement(By.Id("cwos"));
-            Assert.That(calcAnswer.Text, Is.EqualTo(4));
+            Assert.That(calcAnswer.Text, Is.EqualTo("4"));
         }
         [TearDown]
         public void Close_Browser()
