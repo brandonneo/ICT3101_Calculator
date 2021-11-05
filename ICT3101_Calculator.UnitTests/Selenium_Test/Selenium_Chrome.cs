@@ -20,9 +20,10 @@ namespace ICT3101_Calculator.UnitTests.Selenium_Test
             // Setup local Selenium WebDriver
             //q8-10
             ChromeOptions option = new ChromeOptions();
-          //  _driver = new ChromeDriver(@"C:\Users\Brandon\Webdrivers", option);
+          //  _driver = new ChromeDriver(@"C:\Users\Brandon\Webdrivers");
             option.AddArgument("--headless");
-            _driver = new ChromeDriver(option);
+         //  _driver = new ChromeDriver(@"C:\Users\Brandon\Webdrivers", option); // running on local
+            _driver = new ChromeDriver(option); // running on travis 
    
         }
         [Test]

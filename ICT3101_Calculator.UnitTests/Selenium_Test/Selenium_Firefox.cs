@@ -8,7 +8,7 @@ using OpenQA.Selenium.Firefox;
 namespace ICT3101_Calculator.UnitTests.Selenium_Test
 {
     [TestFixture]
-    [Parallelizable] // 7a run much faster?
+    [Parallelizable] // 7a run at the same time  ? doesnt seem to run faster no ?
     class Selenium_Firefox
     {
         private string _testURL = "https://www.google.com";
@@ -19,9 +19,11 @@ namespace ICT3101_Calculator.UnitTests.Selenium_Test
             // Setup local Selenium WebDriver
         
             FirefoxOptions option = new FirefoxOptions();
-           // _driver = new FirefoxDriver(@"C:\Users\Brandon\Webdrivers", option);
+
             option.AddArgument("--headless");
-            _driver = new FirefoxDriver(option);
+         //  _driver = new FirefoxDriver(@"C:\Users\Brandon\Webdrivers", option);
+          //  _driver = new FirefoxDriver(@"C:\Users\Brandon\Webdrivers"); // running on local
+            _driver = new FirefoxDriver(option); // running on travis 
         }
         [Test]
         public void GoogleSubtract_WhenSubracting2from6_ResultEquals4()
